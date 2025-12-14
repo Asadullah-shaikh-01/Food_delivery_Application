@@ -56,6 +56,8 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+
+//#Todo: Its Stop Auto generated Password by Spring Security
 @Service // Marks this class as a Spring-managed service component
 public class CustomerUserDetailsService implements UserDetailsService {
 
@@ -78,6 +80,8 @@ public class CustomerUserDetailsService implements UserDetailsService {
 
         // Get the user's role (e.g., ROLE_ADMIN, ROLE_CUSTOMER, etc.)
         USER_ROLE role = user.getRole();
+
+//        if(role == null) role=USER_ROLE.ROLE_CUSTOMER;
 
         // Create a list of authorities (permissions/roles) for Spring Security
         List<GrantedAuthority> authorities = new ArrayList<>();

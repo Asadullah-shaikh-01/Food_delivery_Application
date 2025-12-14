@@ -28,7 +28,6 @@ public class JwtProvider {
 
         // Convert authorities to a comma-separated string (e.g. "ROLE_USER,ROLE_ADMIN")
         String roles = populateAuthorities(authorities);
-
         // 🧩 Build the JWT token
         String jwt = Jwts.builder()
                 .setIssuedAt(new Date()) // Token creation time
